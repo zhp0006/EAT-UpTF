@@ -5,7 +5,7 @@ import scipy.stats as st
 from statsmodels.stats.multitest import multipletests as mt
 import argparse
 
-#### argument parser #######################################################################
+## argument parser #######################################################################
 parser  = argparse.ArgumentParser(description="Enrichment Analysis Tool for Upstream Transcription Factor of a gene set (EAT-UpTF) : conduct enrichment analysis of upstream transcription factor for a gene set of interest.")
 parser.add_argument('--cistrome', help='database file of cistrome', default='DAP_seq_default.txt', type=argparse.FileType('r'))
 parser.add_argument('--gene_group', help='file containing group of genes (new line delimited)', type=argparse.FileType('r'))
@@ -17,7 +17,7 @@ parser.add_argument('--output', help='output file name', default='EAT-UpTF.outpu
 parser.add_argument('--alias', help='gene alias file, default=NA', default='NA', type=str)
 args = parser.parse_args()
 
-### module for TF annotation ###############################################################
+# module for TF annotation ###############################################################
 def alias_anno(opened_file_list):
     alias   = {}
     for gene in opened_file_list:
